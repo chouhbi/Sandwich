@@ -8,14 +8,19 @@ A simple static site generator that sandwiches HTML files with a common header a
 
 
 # Usage
-1. Place your `top.html` and `bottom.html` templates in the root directory.
+
+1. Add `sandwich.py` to your root directory.
+
+`curl -o sandwich.py https://raw.githubusercontent.com/chouhbi/sandwich/main/sandwich.py`
+
+2. Place your `top.html` and `bottom.html` templates in the root directory.
 ```
 ┌── sandwich.py
 ├── top.html
 └── bottom.html
 ```
 
-2. Place your HTML files in the `pages/` directory.
+3. Place your HTML files in the `pages/` directory.
 ```
 ┌── sandwich.py
 ├── top.html
@@ -25,7 +30,7 @@ A simple static site generator that sandwiches HTML files with a common header a
     ├── page2.html
     └── page3.html
 ```
-3. Place any assets (CSS, JS, images) in the `public/` directory.
+4. Place any assets (CSS, JS, images) in the `public/` directory.
 ```
 ┌── sandwich.py
 ├── top.html
@@ -38,7 +43,7 @@ A simple static site generator that sandwiches HTML files with a common header a
     ├── styles.css
     └── script.js
 ```
-4. Run `sandwich.py` to generate the sandwiched HTML files in the `build/` directory.
+5. Run `sandwich.py` to generate the sandwiched HTML files in the `build/` directory.
 ```
 ┌── sandwich.py
 ├── top.html
