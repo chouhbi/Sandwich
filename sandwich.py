@@ -15,7 +15,7 @@ if not path.exists(BUILD_DIRECTORY):
 # and write to BUILD_DIRECTORY
 for filename in listdir(PAGES_DIRECTORY):
     if filename.endswith(".html"):
-        with open(path.join(PAGES_DIRECTORY, filename), "r") as f:
+        with open(path.join(PAGES_DIRECTORY, filename), "r", encoding="utf-8") as f:
             content = f.read()
         # Add top and bottom HTML
         with open(TOP, "r", encoding="utf-8") as f:
@@ -24,7 +24,7 @@ for filename in listdir(PAGES_DIRECTORY):
             bottom_content = f.read()
 
         content = f"{top_content}\n{content}\n{bottom_content}"
-        with open(path.join(BUILD_DIRECTORY, filename), "w") as f:
+        with open(path.join(BUILD_DIRECTORY, filename), "w", encoding="utf-8") as f:
             f.write(content)
 
 # Copy files from PUBLIC_DIRECTORY into BUILD_DIRECTORY
